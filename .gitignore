@@ -1,0 +1,23 @@
+*.sqlite3
+*/__pycache__
+**/migrations/*.py
+
+# environments
+venv
+env
+.env
+
+etc
+*/migrations
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+dump.rdb
+*.rdb
+
+media
+staticfiles
+apitest

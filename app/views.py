@@ -17,9 +17,9 @@ def facebook_sign_in(request):
     facebook_auth_url = "https://www.facebook.com/v12.0/dialog/oauth"
 
     if 'localhost' in request.get_host():
-        redirect_uri = 'http://localhost:5173/API/facebook-auth-receiver/'  # Update this to match your frontend
+        redirect_uri = 'https://hallolur.com/'  # Update this to match your frontend
     else:
-        redirect_uri = request.build_absolute_uri(reverse('facebook_exchange_code_for_token'))
+        redirect_uri = 'https://hallolur.com/'
 
     params = {
         "client_id": settings.SOCIAL_AUTH_FACEBOOK_KEY,
@@ -39,9 +39,9 @@ def facebook_exchange_code_for_token(request):
     token_url = "https://graph.facebook.com/v12.0/oauth/access_token"
     
     if 'localhost' in request.get_host():
-        redirect_uri = 'http://localhost:5173/API/facebook-auth-receiver/'
+        redirect_uri = 'https://hallolur.com/'
     else:
-        redirect_uri = request.build_absolute_uri(reverse('facebook_exchange_code_for_token'))
+        redirect_uri = 'https://hallolur.com/'
 
     data = {
         "code": code,
